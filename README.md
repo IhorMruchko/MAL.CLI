@@ -189,5 +189,9 @@ anime watch {animeName} [--eps]
 ```
 
 ## Issues
-- [ ] First initialization causing issue with saving token
-- [ ] Can not watch 1 episode of the anime when anime does not have number of all episodes.
+- [ ] [#1] First initialization causing issue with saving token
+- [ ] [#2] Can not watch 1 episode of the anime when anime does not have number of all episodes.
+
+
+[#1]: https://github.com/IhorMruchko/MAL.CLI/issues/1
+[#2]: https://github.com/IhorMruchko/MAL.CLI/issues/2 
