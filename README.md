@@ -189,4 +189,5 @@ anime watch {animeName} [--eps]
 ```
 
 ## Issues
+- [ ] First initialization causing issue with saving token
 - [ ] Can not watch 1 episode of the anime when anime does not have number of all episodes.
