@@ -188,3 +188,5 @@ anime watch 123 --eps=5
 anime watch {animeName} [--eps]
 ```
 
+## Issues
+- [ ] Can not watch 1 episode of the anime when anime does not have number of all episodes.
