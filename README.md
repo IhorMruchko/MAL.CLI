@@ -188,6 +188,9 @@ anime watch 123 --eps=5
 anime watch {animeName} [--eps]
 ```
 
+## Upcoming Features
+- [ ] [Progress of anime watching](https://github.com/IhorMruchko/MAL.CLI/issues/3)
+
 ## Issues
 - [ ] [#1] First initialization causing issue with saving token
 - [ ] [#2] Can not watch 1 episode of the anime when anime does not have number of all episodes.
