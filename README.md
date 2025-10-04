@@ -307,10 +307,12 @@ anime token
  <details>
   <summary>Example 2</summary>
 
+  </br>
+
   ```console
   anime rate 123 9
   ```
-  > Anime is already rated (5), would you like to update it?y
+  > Anime is already rated (5), would you like to update it?y </br>
   > Rate was updated for anime - Fushigi Yuugi
  </details>
 
@@ -334,7 +336,7 @@ anime token
   > 10. Fushigi na Melmo
 
   1
-  > Anime is already rated (9), would you like to update it?y
+  > Anime is already rated (9), would you like to update it?y </br>
   > Rate was updated for anime - Fushigi Yuugi
  </details>
 
@@ -353,12 +355,14 @@ anime token
   > 5. Fushigi Yuugi Special: Nakago Shikkari Shinasai!
 
   1
-  > Anime is already rated (7), would you like to update it?y
+  > Anime is already rated (7), would you like to update it?y </br>
   > Rate was updated for anime - Fushigi Yuugi
  </details>
 
  <details>
   <summary>Example 5</summary>
+
+  </br>
 
   ```console
   anime rate "Fushigi Yuugi" 8 --limit=5
@@ -374,7 +378,7 @@ anime token
  </details>
 
  <details>
-  <summary>Example 4</summary>
+  <summary>Example 6</summary>
 
   </br>
 
@@ -388,7 +392,7 @@ anime token
   > 5. Fushigi Yuugi Special: Nakago Shikkari Shinasai!
 
   1
-  > Anime is already rated (7), would you like to update it?n
+  > Anime is already rated (7), would you like to update it?n </br>
   > Rate is aborted
  </details>
 </details>
