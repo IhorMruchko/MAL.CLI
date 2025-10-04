@@ -42,7 +42,7 @@ anime token
     * Optional
     * Default value = 10
     * Defines maximum amount of the anime to return. Returns specified value or all animes if their quantity less than [limit]
-   * _watching_
+  * _watching_
     * Optional
     * Defines if watching anime will be listed
   
