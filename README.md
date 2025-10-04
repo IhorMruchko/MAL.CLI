@@ -258,6 +258,141 @@ anime token
  </details>
 </details>
 
+<details>
+ <summary>Rate</summary>
+
+ </br>
+
+ ```console
+ anime rate {animeID|animeName} {score} [completed] [limit=10]
+ ```
+ * **_Parameters_**
+   * animeID
+     * Required
+      * Anime id stored in the MyAnimeList database
+      * Could be retrieved from `find` endpoint
+    * animeName
+      * Required
+      * Anime name phrase from MyAnimeList database
+   * score
+     * score to rate the anime
+   * completed
+     * defines if anime will be marked as completed. Watching status by default is set for rated anime
+   * limit
+     * Optional
+     * Used when [animeName] is provided
+     * Default value = 10
+     * Defines maximum amount of the anime to return. Returns specified value or all animes if their quantity less than [limit]
+ 
+ * **_Returns_**:
+   * Anime not selected - if anime is not selected from list if animeName is provided
+   * Anime not found - if anime is not present in the database
+   * Rate is aborted - if anime already has rate and confirmation is not passed
+   * Rate was updated for anime - if anime was rated
+
+ Examples
+
+ <details>
+  <summary>Example 1</summary>
+
+  </br>
+  
+  ```console
+  anime rate 123 5
+  ```
+  > Rate was updated for anime - Fushigi Yuugi
+  
+ </details>
+
+ <details>
+  <summary>Example 2</summary>
+
+  ```console
+  anime rate 123 9
+  ```
+  > Anime is already rated (5), would you like to update it?y
+  > Rate was updated for anime - Fushigi Yuugi
+ </details>
+
+ <details>
+  <summary>Example 3</summary>
+
+  </br>
+
+  ```console
+  anime rate "Fushigi Yuugi" 7
+  ```
+  > 1. Fushigi Yuugi
+  > 2. Fushigi Yuugi: Dai Ni Bu
+  > 3. Fushigi Yuugi: Eikouden
+  > 4. Fushigi Yuugi OVA
+  > 5. Fushigi Yuugi Special: Nakago Shikkari Shinasai!
+  > 6. Fushigi na Somera-chan
+  > 7. Fushigi no Umi no Nadia
+  > 8. Nils no Fushigi na Tabi
+  > 9. Mushishi
+  > 10. Fushigi na Melmo
+
+  1
+  > Anime is already rated (9), would you like to update it?y
+  > Rate was updated for anime - Fushigi Yuugi
+ </details>
+
+ <details>
+  <summary>Example 4</summary>
+
+  </br>
+
+  ```console
+  anime rate "Fushigi Yuugi" 8 --limit=5
+  ```
+  > 1. Fushigi Yuugi
+  > 2. Fushigi Yuugi: Dai Ni Bu
+  > 3. Fushigi Yuugi: Eikouden
+  > 4. Fushigi Yuugi OVA
+  > 5. Fushigi Yuugi Special: Nakago Shikkari Shinasai!
+
+  1
+  > Anime is already rated (7), would you like to update it?y
+  > Rate was updated for anime - Fushigi Yuugi
+ </details>
+
+ <details>
+  <summary>Example 5</summary>
+
+  ```console
+  anime rate "Fushigi Yuugi" 8 --limit=5
+  ```
+  > 1. Fushigi Yuugi
+  > 2. Fushigi Yuugi: Dai Ni Bu
+  > 3. Fushigi Yuugi: Eikouden
+  > 4. Fushigi Yuugi OVA
+  > 5. Fushigi Yuugi Special: Nakago Shikkari Shinasai!
+
+  10
+  > Anime not selected
+ </details>
+
+ <details>
+  <summary>Example 4</summary>
+
+  </br>
+
+  ```console
+  anime rate "Fushigi Yuugi" 8 --limit=5
+  ```
+  > 1. Fushigi Yuugi
+  > 2. Fushigi Yuugi: Dai Ni Bu
+  > 3. Fushigi Yuugi: Eikouden
+  > 4. Fushigi Yuugi OVA
+  > 5. Fushigi Yuugi Special: Nakago Shikkari Shinasai!
+
+  1
+  > Anime is already rated (7), would you like to update it?n
+  > Rate is aborted
+ </details>
+</details>
+
 ## Upcoming Features
 - [ ] [Progress of anime watching](https://github.com/IhorMruchko/MAL.CLI/issues/3)
 
